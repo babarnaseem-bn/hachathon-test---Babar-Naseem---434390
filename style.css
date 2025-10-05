@@ -63,13 +63,14 @@
 /* heroSection */
 
 .heroSection {
-    background-color: blue;
+    /* background-color: blue; */
     width: 100%;
     height: 100px;
     font-family: Arial, Helvetica, sans-serif;
     display: flex;
     flex-direction: column;
     align-items: center;
+    font-weight: 100px;
  }
 
  .heroSec2 {
@@ -82,46 +83,64 @@
  /* 3rd Section  */
 
  .team {
-   width: 100%;
-   height: 100px;
-   font-family: Arial, Helvetica, sans-serif;
-   display: flex;
-   flex-direction: column;
-   align-items: center;
- }
- samp {
-    color: blue;
- }
- 
- .teamDev {
-    width: 75%;
-    height: 300px;
-    display: grid;
-    grid-template-columns: auto auto auto auto;
-    grid-template-rows: auto;
-    /* justify-items: center; */
-    gap: 80px;   
-    /* background-color: blue; */
-    margin-left: 200px;
- }
-
-
-#child img {
-    width: 100%;
-    height: 200%;
+  text-align: center;
+  padding: 40px 20px;
+  background-color: #ffffff;
 }
 
+.team h1 {
+  font-size: 2.5rem;
+}
+
+.team h1 samp {
+  color: #0077b6;
+  font-style: normal;
+  font-weight: bold;
+}
+ 
+ .teamDev {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+  padding: 40px;
+  background-color: #ffffff;
+}
 
 #child {
-    border-radius: 50%;
-    overflow: hidden;
-    
- }
+  background-color: #f0f0f0;
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+#child:hover {
+  transform: translateY(-5px);
+}
+
+#child img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+#child h3 {
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+#child p {
+  font-size: 14px;
+  color: #666;
+}
  
 /* 4th Section */
 
  #pappa {
-   margin-top: 50px;
+   /* margin-top: 50px; */
     height: 800px;
     width: 800px;
     margin: 0 auto;
@@ -201,7 +220,7 @@
     width: 100%;
     padding: 80px 50px;
     color: white;
-
+}
 
     /* media query for responsiveness */
 
@@ -214,3 +233,17 @@
     flex-direction: column;
     } 
  }
+ @media (max-width: 600px) {
+  .team h1 {
+    font-size: 2rem;
+  }
+
+  #child img {
+    height: 180px;
+  }
+
+  .bachay img {
+    height: 100px;
+  }
+}
+
